@@ -93,6 +93,22 @@ as an alternative to flashing the standard Pixhawk bootloader.  Users of a board
 with this bootloader will not need to use an unofficial distribution of the APM
 Mission Planner for firmware upgrade.
 
+## Why the name "Libre-PX4Bootloader"
+
+This is a fork of the PX4 open source project bootloader. I want to emphasize
+that the official bootloader, nor any of the PX4 project's firmware upload
+software, uses the board authentication features to restrict use of any hardware
+or software.
+
+Lorenz, the PX4 project lead, pointed out that the project name may reflect
+poorly on their project. This was not my intention, and I regret any confusion
+this causes.
+
+The official bootloader reports the values true values of the serial
+number and one-time programmable (OTP) memory on the STM32F4 chip. This
+bootloader lies when reporting those fields, instead reporting values
+from a 3DR-manufactured Pixhawk board purchased by the author.
+
 ## Who are you? What is your connection to APM?
 
 I'm Pat Hickey, a software developer from Portland, Oregon. In the past I served
