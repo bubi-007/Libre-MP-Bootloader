@@ -76,8 +76,9 @@ While the Mission Planner project maintainers have every right to follow 3DR's
 direction to include this restriction, 3DR's directions are *bad stewardship* of
 the open source community, because they *reduce user freedoms* for their own
 gain. This precedent reduces the legitimacy of the entire family of 3DR
-supported open source projects, and will make contributors and competitors alike
-less likely to support these projects.
+supported open source projects, and ought to make contributors and competitors
+alike less comfortable supporting these projects. To restore community trust,
+3DR should remove the authenticity restrictions from the Mission Planner.
 
 ## How do I use this?
 
@@ -110,11 +111,13 @@ past. I've considered all of those collaborations to be positive and do not wish
 have sent me a bunch of free hardware and paid my travel expenses to speak at
 DroneCon in 2013.
 
-Currently, I'm the engineering lead of the [SMACCMPilot Project][], a research
+Currently, I'm the engineering lead of the [SMACCMPilot Project][sp], a research
 project building high assurance open-source autopilot software. SMACCMPilot
 uses open source software derived from the APM open source project and the PX4
 project. It is research software and not intended to provide a user alternative
 to the APM project software at this time.
+
+[sp]: http://smaccmpilot.org
 
 ## Are these opinions the opinions of your employer? Are RT's endorsements?
 
