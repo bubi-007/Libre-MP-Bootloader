@@ -333,6 +333,58 @@ flash_func_read_word(uint32_t address)
 	return *(uint32_t *)(address + APP_LOAD_ADDRESS);
 }
 
+static const uint32_t static_otp[] =
+	{ 0x345850UL
+	, 0x26ac00UL
+	, 0x1000UL
+	, 0xffffff00UL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0x3899366eUL
+	, 0x7e4b384bUL
+	, 0x731f4abdUL
+	, 0xed39b52aUL
+	, 0xa0393ee6UL
+	, 0x4e0fa7b2UL
+	, 0xb9763277UL
+	, 0xe1ead07fUL
+	, 0xceca343eUL
+	, 0x591d2008UL
+	, 0x98f9a4ffUL
+	, 0x21275432UL
+	, 0xb1c82131UL
+	, 0x404ce274UL
+	, 0x8ce1f88dUL
+	, 0x685913e5UL
+	, 0x5bcda010UL
+	, 0xa351980fUL
+	, 0x545ad77eUL
+	, 0x950eb779UL
+	, 0x2b5c123bUL
+	, 0x72de0c38UL
+	, 0xe4c5c11dUL
+	, 0x184f50UL
+	, 0x1c2a9564UL
+	, 0xcf0e0d81UL
+	, 0x2a429f48UL
+	, 0x81cd04a0UL
+	, 0xa9d3526dUL
+	, 0x45433f86UL
+	, 0x52737535UL
+	, 0x754cbc0dUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	, 0xffffffffUL
+	};
+
+
 uint32_t
 flash_func_read_otp(uint32_t address)
 {
@@ -341,15 +393,22 @@ flash_func_read_otp(uint32_t address)
 	if (address > OTP_SIZE)
 		return 0;
 
-	return *(uint32_t *)(address + OTP_BASE);
+	return static_otp[address >> 2];
 }
+
+static const uint32_t static_sn[] =
+	{ 0x230030
+	, 0x35324718
+	, 0x36343032
+	};
+
+
 uint32_t
 flash_func_read_sn(uint32_t address)
 {
-	// read a byte out from unique chip ID area
-	// it's 12 bytes, or 3 words. 
-    return *(uint32_t *)(address + UDID_START);
+	return static_sn[address >> 2];
 }
+
 void
 led_on(unsigned led)
 {
