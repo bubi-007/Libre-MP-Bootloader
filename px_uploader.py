@@ -250,6 +250,8 @@ class uploader(object):
                 self.__send(uploader.GET_OTP + t + uploader.EOC)
                 value = self.__recv(4)
                 self.__getSync()
+                vi = struct.unpack("I",value)
+                print ("getOTP 0x%x = 0x%xUL" % (param, vi[0]))
                 return value
 
         # send the GET_OTP command and wait for an info parameter
@@ -258,6 +260,8 @@ class uploader(object):
                 self.__send(uploader.GET_SN + t + uploader.EOC)
                 value = self.__recv(4)
                 self.__getSync()
+                vi = struct.unpack("I",value)
+                print ("getSN 0x%x = 0x%x" % (param, vi[0]))
                 return value
 
         # send the CHIP_ERASE command and wait for the bootloader to become ready
