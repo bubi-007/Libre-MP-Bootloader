@@ -1,5 +1,5 @@
 
-# Libre-PX4Bootloader
+# Libre-MP-Bootloader
 
 ### Free interoperation of non-3D Robotics Pixhawk boards with the APM Mission Planner
 
