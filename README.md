@@ -93,7 +93,7 @@ as an alternative to flashing the standard Pixhawk bootloader.  Users of a board
 with this bootloader will not need to use an unofficial distribution of the APM
 Mission Planner for firmware upgrade.
 
-## Why the name "Libre-PX4Bootloader"
+## Why the name "Libre-MP-Bootloader"
 
 This is a fork of the PX4 open source project bootloader. I want to emphasize
 that the official bootloader, nor any of the PX4 project's firmware upload
